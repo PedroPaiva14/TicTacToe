@@ -9,9 +9,6 @@ const winningMessage = document.querySelector("[data-winning-message]");
 
 const restartButton = document.querySelector("[data-restart-button]");
 
-let player1 = prompt("Qual o nome do 1º jogador");
-let player2 = prompt("Qual o nome do 2º jogador");
-
 let isOturn;
 
 const winningCombination = [
@@ -28,6 +25,10 @@ const winningCombination = [
 ];
 
 const startGame = () => {
+  
+  let player1 = prompt("Qual o nome do 1º jogador");
+  let player2 = prompt("Qual o nome do 2º jogador");
+  
   isOturn = false;
 
   for (const cell of cellElements) {
