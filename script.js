@@ -6,7 +6,11 @@ const winningMessageTextElement = document.querySelector(
   "[data-winning-message-text]"
 );
 const winningMessage = document.querySelector("[data-winning-message]");
+
 const restartButton = document.querySelector("[data-restart-button]");
+
+let player1 = prompt("Qual o nome do 1º jogador");
+let player2 = prompt("Qual o nome do 2º jogador");
 
 let isOturn;
 
@@ -41,7 +45,7 @@ const endGame = (isDraw) => {
   if (isDraw) {
     winningMessageTextElement.innerText = "Empate!";
   } else {
-    winningMessageTextElement.innerText = isOturn ? "O venceu!" : "X Venceu!";
+    winningMessageTextElement.innerText = isOturn ? player2+" venceu!" : player1+" venceu!";
   }
 
   winningMessage.classList.add("show-winning-message");
