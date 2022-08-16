@@ -24,10 +24,12 @@ const winningCombination = [
   [2, 4, 6],
 ];
 
+let player1, player2;
+
 const startGame = () => {
   
-  let player1 = prompt("Qual o nome do 1º jogador");
-  let player2 = prompt("Qual o nome do 2º jogador");
+  player1 = prompt("Qual o nome do 1º jogador");
+  player2 = prompt("Qual o nome do 2º jogador");
   
   isOturn = false;
 
