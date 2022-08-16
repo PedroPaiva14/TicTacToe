@@ -31,6 +31,9 @@ const startGame = () => {
   player1 = prompt("Qual o nome do 1º jogador");
   player2 = prompt("Qual o nome do 2º jogador");
   
+  player1 = player1 ?? "X"
+  player2 = player2 ?? "〇"
+  
   isOturn = false;
 
   for (const cell of cellElements) {
